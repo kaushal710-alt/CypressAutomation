@@ -14,7 +14,7 @@ describe('My First Test Suite', function () {
     it ('Geoworkz Login 1', () => {
         //cy.login('username1','password1','tenancy1')
     cy.log("first test case is passed")
-    cy.log("It is successfully completed")
+    
     //     //cy.wait(15000)
     //cy.should('have.text'," ")
     })
