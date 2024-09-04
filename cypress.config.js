@@ -16,14 +16,21 @@ module.exports = defineConfig({
   {
 url : "https://www.geoworkz.com/"
   },
+
+  defaultCommandTimeout: 6000,
+  reporter : 'cypress-mochawesome-reporter',
+  projectId: "c64wqn",
   e2e: {
     //setupNodeEvents{
     setupNodeEvents(on, config) {
       //specPattern:'cypress/Integration/PageObjects/BDD/*.feature',
-      specPattern: 'cypress/Integration/PageObjects/*.cy.js'
+      require('cypress-mochawesome-reporter/plugin')(on);
+      
 
-      baseUrl: 'https://www.geoworkz.com/#' 
+      //baseUrl: 'https://www.geoworkz.com/#' 
     },
+
+    specPattern: 'cypress/Integration/Tests/*.js',
     experimentalOriginDependencies: true,
     //Cypress.config('experimentalSessionAndOrigin', true)
     

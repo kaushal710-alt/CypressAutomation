@@ -1,9 +1,9 @@
 //import Homepage_PageObject from "../Integration/PageObjects/Homepage_PageObject"
-import Homepage_PageObject from "../Integration/PageObjects/Homepage_PageObject"
+//import Homepage_PageObject from "./Homepage_PageObject"
 //import Login_Final from "./Login_Final"
 //import Login_Final from "../PageObjects/Login_Final"
 //import Login_Final from "..PageObjects/Login_Final"
-import Login_Final from "../Integration/PageObjects/Login_Final"
+//import Login_Final from "./Login_Final"
 describe('My First Test Suite', function () {
     beforeEach(() =>
     {   
