@@ -199,6 +199,7 @@ const result = arrayOrig.filter(element=>element.includes(searchText))
 
 const arrayOrig1 = ["Apple", "Banana", "Carrot","Cucumber","Cucumcer"];
 cy.log ('it is passed')
+cy.log('it is failed')
 
 const result1 = arrayOrig.find(element=>element.includes('Ban'))
 cy.log(result1)
