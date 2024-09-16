@@ -17,6 +17,40 @@ cy.visit(urlCentral)
 cy.get('#btnAccept').click({ force: true })
 
 })
+
+
+Cypress.Commands.add("NavigateToOurPlans", () =>
+{
+    cy.get('#menuProduct').trigger('mouseover');
+    //cy.wait(5000)
+     cy.get('#menuOurPlan').should('be.visible');
+     cy.get('#menuOurPlan').first().click();
+})
+
+Cypress.Commands.add("FillCheckoutForm", () =>
+    {
+        cy.fixture('example').then((variable) => {
+        
+            const uniqueUserName = variable.username + Date.now()
+            const uniqueTenancy = variable.TenancyName + Date.now()
+            cy.get('#Username').type (uniqueUserName)
+            cy.get('#TenancyName').type (uniqueTenancy)
+            cy.get('#FirstName').type (variable.firstName)
+            cy.get('#LastName').type (variable.lastName)
+            cy.get('#Email').type (Date.now() + variable.emailAddress)
+            cy.get('#Address1').type(variable.AddressLine1)
+            cy.get('#City').type(variable.city)
+            cy.get('#ZipPostalCode').type(variable.ZipCode)
+            cy.get('#Phone').type(variable.telephoneNumber)
+            cy.get('label[for="common-checkbox-1"]').click()
+            cy.get('label[for="common-checkbox-2"]').click()
+            cy.get('#btnSubmit').click()
+    })
+        
+    })
+
+
+
 // // -- This is a parent command --
 // // Cypress.Commands.add('login', (email, password) => { ... })
 // //
