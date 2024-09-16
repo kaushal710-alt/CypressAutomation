@@ -2,15 +2,10 @@
   "name": "cypressautomation",
   "version": "1.0.0",
   "main": "index.js",
-
-
-
   "scripts": {
     "test": "npx cypress run",
     "SmokeTest": "npx cypress run --headed --browser chrome --spec \"cypress/Integration/Tests/Actions.js\""
   },
-
-  
   "author": "",
   "license": "ISC",
   "description": "",
@@ -33,7 +28,4 @@
     "process": "^0.11.10",
     "typescript": "^5.5.4"
   }
-
-  
-
 }
